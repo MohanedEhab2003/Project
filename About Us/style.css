@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+
+.logo {
+    font-weight: bold;
+    color: #7b3fe4;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #7b3fe4;
+}
+
+/* About */
+.about {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.about h1 {
+    font-size: 42px;
+    background: linear-gradient(to right, #6a5acd, #c77dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #777;
+    font-size: 15px;
+}
+
+/* Content */
+.content {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.box {
+    width: 300px;
+}
+
+.box h2 {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 8px 25px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.box ul {
+    text-align: left;
+}
+
+.box li {
+    margin-bottom: 12px;
+    color: #c77dff;
+    font-size: 14px;
+}
+
+/* Line */
+.line {
+    width: 2px;
+    height: 180px;
+    background-color: black;
+}
+
+/* Why */
+.why {
+    margin-top: 50px;
+}
+
+.why h2 {
+    font-size: 26px;
+    background: linear-gradient(to right, #6a5acd, #c77dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    color: #777;
+    font-size: 14px;
+}
