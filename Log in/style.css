@@ -1,0 +1,363 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px;
+    background: transparent;
+}
+
+hr {
+    height: 2px;
+    background: #e0e0e0;
+    border: none;
+    margin: 0;
+}
+
+.second-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+/* HEADER - LOGO LEFT, NAV CENTERED */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.logo {
+    color: #6c2bd9;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 0;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+/* Navigation wrapper for centering */
+.nav-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 25px;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: purple;
+    background-color: #f3e8ff;
+    transform: scale(1.05);
+}
+
+/* Empty div for spacing on the right to balance the logo */
+.header-spacer {
+    width: 120px;
+    visibility: hidden;
+}
+
+/* LEFT CARD */
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 380px;
+    box-shadow: 0 10px 30px rgba(133, 31, 236, 0.2);
+}
+
+.login-card .logo {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: left;
+    display: block;
+}
+
+h2 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.login-card p {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+}
+
+input:not(.special) {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+}
+
+input:not(.special):focus {
+    border-color: #6c2bd9;
+    box-shadow: 0 0 5px rgba(108, 43, 217, 0.3);
+}
+
+.error {
+    font-size: 11px;
+    color: #ff0000;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.error.show-error {
+    display: block;
+}
+
+.password-box {
+    position: relative;
+}
+
+.show {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    cursor: pointer;
+    color: #6c2bd9;
+    font-weight: bold;
+}
+
+.show:hover {
+    color: #4a1a9e;
+}
+
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.checkbox p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
+
+.special {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin: 0;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #7b2ff7, #9d4edd);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 43, 217, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.signup {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.signup a {
+    color: #6c2bd9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT CARD */
+.info-card {
+    width: 400px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(133, 31, 236, 0.2);
+}
+
+.info-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.info-item {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #555;
+    padding: 5px 0;
+}
+
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.badge {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    background: #f0f0f0;
+    object-fit: cover;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .second-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .logo {
+        align-self: flex-start;
+    }
+    
+    .nav-wrapper {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+    
+    .header-spacer {
+        display: none;
+    }
+    
+    header nav {
+        gap: 20px;
+    }
+    
+    .login-card, .info-card {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+    }
+    
+    .login-card, .info-card {
+        padding: 20px;
+    }
+    
+    header nav {
+        gap: 12px;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        white-space: normal;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .second-container {
+        padding: 20px 15px;
+    }
+    
+    .login-card, .info-card {
+        padding: 20px;
+    }
+}
+
+/* Error message styling */
+.error {
+    font-size: 11px;
+    color: #ff0000;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.error.show-error {
+    display: block;
+}
