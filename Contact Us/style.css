@@ -1,0 +1,272 @@
+/* Start Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f6f6f6;
+  color: #1f2937;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+/* End Global */
+
+/* Start Header */
+header {
+  padding: 20px 0;
+  background: #fff;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.heart {
+  color: #8e44ad;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #777;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #8e44ad;
+}
+/* End Header */
+
+/* Start Main */
+.main {
+  margin-top: 40px;
+}
+
+.main .container {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+}
+
+/* Image */
+.image {
+  flex: 1;
+  min-height: 520px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  animation: imageReveal 0.9s ease-out both;
+}
+
+/* Form */
+.form {
+  flex: 1;
+  animation: formReveal 0.9s ease-out both;
+}
+
+@media (max-width: 900px) {
+  .main .container {
+    flex-direction: column;
+  }
+
+  .image {
+    min-height: 320px;
+  }
+}
+
+.form h2 {
+  text-align: center;
+  padding: 12px;
+  color: white;
+  background: linear-gradient(to right, #2c3e50, #8e44ad);
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  border-radius: 12px;
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.input label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #999;
+  padding: 10px 6px;
+  background: transparent;
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.input input::placeholder {
+  color: #9ca3af;
+}
+
+.input input:focus {
+  border-bottom-color: #8e44ad;
+  box-shadow: 0 8px 14px -14px rgba(142, 68, 173, 0.8);
+}
+
+/* Social */
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.social a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  animation: iconPop 0.55s ease both;
+}
+
+.social a:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.social a:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.social a:nth-child(3) {
+  animation-delay: 0.22s;
+}
+
+.social a:nth-child(4) {
+  animation-delay: 0.28s;
+}
+
+.social a:nth-child(5) {
+  animation-delay: 0.34s;
+}
+
+.social a:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+.social a i {
+  font-size: 18px;
+}
+
+.social a:hover {
+  color: #8e44ad;
+  border-color: #8e44ad;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 16px -12px rgba(142, 68, 173, 0.75);
+}
+
+/* Button */
+.send {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #8e44ad;
+  color: white;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.send:hover {
+  background: #732d91;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 20px -14px rgba(115, 45, 145, 0.9);
+}
+
+@keyframes imageReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes formReveal {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes iconPop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image img,
+  .form,
+  .social a {
+    animation: none;
+  }
+}
+/* End Main */
