@@ -1,0 +1,306 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f5f3ff;
+  color: #1e1b2e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(124,58,237,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #7c3aed;
+}
+
+.logo svg { width: 28px; height: 28px; }
+
+.nav-links { display: flex; list-style: none; gap: 8px; }
+
+.nav-link {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6b7280;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  display: block;
+}
+
+.nav-link:hover { color: #7c3aed; background: #f5f3ff; }
+
+.nav-link.active {
+  color: #7c3aed;
+  border-bottom: 2px solid #7c3aed;
+  background: #f5f3ff;
+}
+
+main {
+  flex: 1;
+  padding: 40px 40px 60px;
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+main h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1e1b2e;
+  margin-bottom: 28px;
+}
+
+.search-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 36px;
+  box-shadow: 0 2px 16px rgba(124,58,237,0.08);
+  border: 1px solid #ede9fe;
+}
+
+.search-form {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.search-field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c3aed;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.search-field input,
+.search-field select {
+  padding: 10px 14px;
+  border: 1.5px solid #ddd6fe;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  color: #1e1b2e;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-field input:focus,
+.search-field select:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.12);
+  background: #fff;
+}
+
+.search-btn {
+  padding: 11px 28px;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+
+.search-btn:hover { background: #6d28d9; transform: translateY(-1px); }
+
+.caregiver-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 16px rgba(124,58,237,0.07);
+  border: 1px solid #ede9fe;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.caregiver-card:hover {
+  box-shadow: 0 6px 24px rgba(124,58,237,0.13);
+  transform: translateY(-2px);
+}
+
+.photo-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ede9fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 2px dashed #c4b5fd;
+  transition: background 0.2s;
+}
+
+.photo-placeholder:hover { background: #ddd6fe; }
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.add-photo-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7c3aed;
+  text-align: center;
+  pointer-events: none;
+}
+
+.caregiver-info {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.info-row label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c3aed;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-row input {
+  padding: 9px 12px;
+  border: 1.5px solid #ddd6fe;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  color: #1e1b2e;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.info-row input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.12);
+  background: #fff;
+}
+
+.book-btn {
+  padding: 10px 26px;
+  background: #7c3aed;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.book-btn:hover:not(.booked) { background: #6d28d9; transform: translateY(-1px); }
+
+.book-btn.booked {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.finalsection {
+  display: flex;
+  justify-content: space-between;
+  background: #cecbcb;
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+}
+
+.explore a {
+  display: block;
+  text-decoration: none;
+  color: purple;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.explore a:hover { color: #000000; padding-left: 5px; }
+
+.legal h4 { color: #333; margin-bottom: 10px; }
+
+.legal a {
+  display: block;
+  text-decoration: none;
+  color: purple;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.legal a:hover { color: #000000; padding-left: 5px; }
+
+.rights {
+  background-color: rgb(133,31,251);
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.rights p {
+  font-style: italic;
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  nav { padding: 14px 20px; }
+  main { padding: 24px 20px 40px; }
+  .caregiver-card { flex-wrap: wrap; }
+  .search-form { flex-direction: column; }
+  .finalsection { padding: 10px; }
+}
